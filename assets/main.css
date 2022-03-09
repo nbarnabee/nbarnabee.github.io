@@ -168,7 +168,7 @@ small {
 }
 
 
-/* ------- Burger Button & Nav controls --------- */
+/* ------- Burger Button --------- */
 
 
 .dropmenu {
@@ -225,18 +225,21 @@ small {
 }
 
 
+/* ----- Navigation Menu -------- */
+
 .menu {
   position: absolute;
   background: #000;
   margin-left: -10px;
   z-index: -1;
+  height: 100vh;
   top: 0;
   width: 0%;
   transition: 0.5s;
   overflow: hidden;
 }
 
-.menu  ul {
+.menu  .links {
   display: flex;
   flex-direction:column;
   justify-content: center;
@@ -245,24 +248,19 @@ small {
   padding: 10vw 0;
 }
 
-.menu ul li {
-  position: relative;
-}
+ .menu .links li a {
+   display: block;
+   padding:15px 14px;
+   text-decoration:none;
+   color:#FFF;
+   transition: 0.2s;
+ }
 
-.menu ul li:hover a {
-  background:#111;
-}
 
-.menu ul li:hover > ul {
-  display:block;
-}
-
-.menu ul li a {
-  display: block;
-  padding:15px 14px;
-  text-decoration:none;
-  color:#FFF;
-  transition:.3s;
+.menu .links li:hover a,
+.social-media img:hover {
+  transform: scale(1.4);
+  transition: 0.2s;
 }
 
 .menu.open {
@@ -270,6 +268,21 @@ small {
   width: min(50vw, 250px);
 }
 
+.menu .social-media {
+  display: flex;
+  width: 80%;
+  margin-inline: auto;
+  justify-content: center;
+}
+
+.social-media img {
+  width: 25px;
+  transition: 0.2s
+}
+
+.menu .social-media img {
+  filter: invert(100%) sepia(7%) saturate(11%) hue-rotate(260deg) brightness(104%) contrast(105%);
+}
 
 
 /* ----------- Main -----------------*/
@@ -380,10 +393,6 @@ footer > ul {
   justify-content: center;
   align-items: center;
   gap: 5%;
-}
-
-.social-media img {
-  width: 25px;
 }
 
 
