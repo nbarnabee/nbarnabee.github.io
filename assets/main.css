@@ -81,14 +81,16 @@ html {
   --s1: calc(var(--s0) * var(--ratio));
   --s2: calc(var(--s1) * var(--ratio));
   --s3: calc(var(--s2) * var(--ratio));
+  --s4: calc(var(--s3) * var(--ratio));
+  --s5: calc(var(--s4) * var(--ratio));
 }
 
 .stack > * + * {
   margin-top: var(--s0);
 }
 
-.stack-big > * + * {
-  margin-top: var(--s1);
+.stack-big ~ * {
+  margin-top: var(--s5);
 }
 
 body {
@@ -96,6 +98,11 @@ body {
   margin: min(20px, 2vw);
   font-family: var(--font-text);
   line-height: 1.5;
+}
+
+body > * + *:not(.projects) {
+  width: min(100ch, 80%);
+  margin-inline: auto;
 }
 
 .heading {
@@ -127,6 +134,11 @@ bold {
 small {
   font-size: var(--s-1);
 }
+
+.attribution > a {
+  text-decoration: underline;
+}
+
 
 /* --------- Header-Top --------- */
 
@@ -257,15 +269,15 @@ small {
 /* ----------- Main -----------------*/
 
 main {
-  width: min(100ch, 80%);
-  margin-inline: auto;
   padding-top: 100px;
   display: flex;
   align-items: center;
   gap: var(--s0);
+  margin-top: var(--s3);
 }
 
 main img {
+  background-color: white;
   width: min(42%, 300px);
   max-width: 100%;
   border-radius: 10px;
@@ -277,6 +289,36 @@ main img {
 main .txt-large {
   margin-top: var(--s0);
 }
+
+
+
+  /* ---------  About --------------- */
+  
+  .about {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 3vw;
+  }
+
+  .about-text {
+    max-width:60ch;
+  }
+
+  .about-img {
+    width: min(50%, 300px);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    flex: none;
+  }
+
+  .about img {
+    max-width: 100%;
+  }
+
+  /*------ Photo by Alex Motoc
+  https://unsplash.com/@alexmotoc --------*/
+
 
 /* --------- Projects --------------  */
 
