@@ -145,6 +145,19 @@ small {
   text-decoration: underline;
 }
 
+.social-media {
+  display: flex;
+  width: 80%;
+  margin-inline: auto;
+  justify-content: center;
+  gap: var(--s0);
+}
+
+.social-media img {
+  width: 25px;
+  transition: 0.2s
+}
+
 
 /* --------- Header-Top --------- */
 
@@ -156,7 +169,7 @@ small {
   background-color: white;
 }
 
-.header-top img,
+.header-top .logo,
 .header-top > .dropmenu {
   padding: 10px;
 }
@@ -268,18 +281,6 @@ small {
   width: min(50vw, 250px);
 }
 
-.menu .social-media {
-  display: flex;
-  width: 80%;
-  margin-inline: auto;
-  justify-content: center;
-}
-
-.social-media img {
-  width: 25px;
-  transition: 0.2s
-}
-
 .menu .social-media img {
   filter: invert(100%) sepia(7%) saturate(11%) hue-rotate(260deg) brightness(104%) contrast(105%);
 }
@@ -386,13 +387,6 @@ main .txt-large {
 
 footer * {
   text-align: center;
-}
-
-footer > ul {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 5%;
 }
 
 
