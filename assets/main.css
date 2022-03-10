@@ -72,7 +72,7 @@ html {
   --font-text: 'Open Sans', sans-serif;
 
   --ratio: 1.5;
-  --s0: min(4vw, 1rem);
+  --s0: min(3vw, 1rem);
   --s-1: calc(var(--s0) / var(--ratio));
   --s-2: calc(var(--s-1) / var(--ratio));
   --s-3: calc(var(--s-2) / var(--ratio));
@@ -297,6 +297,7 @@ main {
 
 main.index {
   display: flex;
+  flex-direction: column-reverse;
   align-items: center;
   gap: var(--s0);
 }
@@ -307,7 +308,7 @@ main.index img {
   max-width: 100%;
   border-radius: 10px;
   border: 8px solid var(--color-accent);
-  align-self: flex-start;
+  align-self: center;
   flex: 1 0 auto;
 }
 
@@ -358,7 +359,7 @@ main.index .txt-large {
   margin-inline: auto;
   margin-top: var(--s1);
   display: grid;
-  grid-gap: min(1vw, 1rem);
+  grid-gap: min(2vw, 2rem);
   grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
 
 }
@@ -429,4 +430,17 @@ footer * {
 
 /* --------- Media Queries -------- */
 
-/* Would need a breakpoint at 630 to change the way my hero bit is laid out */
+
+@media screen and (min-width: 920px) {
+
+  main.index {
+    flex-direction: row;
+  }
+  
+  main.index img {
+    align-self: flex-start;
+  }
+
+}
+
+
