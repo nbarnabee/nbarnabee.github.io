@@ -346,11 +346,10 @@ main .txt-large {
 .projects > .container {
   width: 90%;
   margin-inline: auto;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
+  display: grid;
+  grid-gap: min(1vw, 1rem);
+  grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
+
 }
 
 .card {
@@ -360,7 +359,6 @@ main .txt-large {
   border: 1px solid var(--color-dark);
   box-shadow: 0 2px 5px rgba(19, 18, 18, 0.2);
   border-radius: 5px;
-  flex: none;
   display: flex;
   flex-direction: column;
 }
