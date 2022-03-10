@@ -44,7 +44,7 @@
     </nav>
   </header>
 
-  <main class="stack-big">
+  <main class="body-stack">
     <div class="main-text stack">
       <h1 class="heading">My name is Nicole and I have a mission.</h1>
       <p class="txt-large">The purpose of the web is communication, and I want to help you broadcast your message to
@@ -112,8 +112,18 @@
 
   <div class="spacer"></div>
 
-  <section aria-labelledby="contact">
+  <section class="contact stack" aria-labelledby="contact">
     <h2 id="contact" class="heading">Contact me</h2>
+    <p class="contact-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi recusandae repellendus
+      officia quo dolores consequatur?</p>
+    <form method="post" action="#">
+      <input type="text" name="name" id="name" placeholder="Name">
+      <input type="email" name="email" id="email" placeholder="Email">
+      <input type="text" name="subject" id="subject" placeholder="Subject">
+      <textarea name="message" id="message" placeholder="Message" rows="6"></textarea>
+      <button disabled>Send Message</button>
+      <button type="reset">Reset Form</button>
+    </form>
   </section>
 
   <footer>
