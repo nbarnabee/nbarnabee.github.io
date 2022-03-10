@@ -399,15 +399,18 @@ main .txt-large {
   gap: var(--s0);
 }
 
-.contact form * {
+.contact form *:not(button) {
   border-radius: 5px;
   border: 1px solid gray;
+  padding-left: 10px;
+  font-family: var(--font-text);
+  font-size: var(--s0);
 }
 
 input {
  height: var(--s2);
- padding-left: 10px;
 }
+
 
 
 /* ---------------  Footer --------------- */
