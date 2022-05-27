@@ -21,7 +21,7 @@
 @media (min-width: 1000px) {
   :root {
     --fs-h1: 4.5rem;
-    --fs-h2: 3.75rem;
+    --fs-h2: 3.5rem;
     --fs-h3: 1.5rem;
     --fs-body: 1.125rem;
   }
@@ -94,6 +94,15 @@ h3 {
 }
 
 
+
+
+/* ----- nav bar --------------- */
+
+.logo>img {
+  height: 64px;
+}
+
+
 /*-------- intro section ----------*/
 
 nav {
@@ -104,11 +113,15 @@ nav {
   position: relative;
 }
 
-@media (min-width: 600px) {
+.section__subtitle--intro {
+  text-align: right;
+}
+
+@media (min-width: 700px) {
   .intro {
     display: grid;
     width: min-content;
-    margin: 0 auto;
+    margin: 0 auto 4em auto;
     grid-column-gap: 1em;
     grid-template-areas:
       "img title"
@@ -118,7 +131,7 @@ nav {
 
   .intro__img {
     grid-area: img;
-    min-width: 15vw;
+    min-width: 20vw;
   }
 
   .section__title--intro {
@@ -129,13 +142,58 @@ nav {
     align-self: start;
     grid-column: -1/1;
     grid-row: 2;
-    text-align: right;
   }
+}
 
+/*-------- services -----------*/
 
+.services {
+  background-color: var(--color-dark);
+  color: var(--color-light);
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0.30) 40%, rgba(0, 0, 0, 0.75) 100%), url("../images/sergey-zolkin-handsoncomputer-small.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+  padding-block: 4em;
+}
+
+.section__title--services {
+  position: relative;
+}
+
+.section__title--services::after {
+  content: "";
+  display: block;
+  width: 4em;
+  height: 6px;
+  opacity: 75%;
+  margin: 0.1em auto 0.5em auto;
+  background-color: var(--color-accent);
+}
+
+.service {
+  margin-block: 2.5em;
+  text-align: left;
+}
+
+.service:nth-child(even) {
+  text-align: right;
+}
+
+.service>* {
+  margin: 0.5em;
 }
 
 
-.logo>img {
-  height: 64px;
+@media (min-width: 700px) {
+  .service-container {
+    display: flex;
+    gap: 2%;
+  }
+
+  .service,
+  .service:nth-child(even) {
+    text-align: center;
+  }
 }
