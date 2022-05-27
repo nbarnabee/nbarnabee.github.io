@@ -1,0 +1,64 @@
+/* ---- Custom properties ----- */
+
+:root {
+  --ff-header: "Raleway", Verdana, Geneva, Tahoma, sans-serif;
+  --ff-body: "Open Sans", Verdana, Geneva, Tahoma, sans-serif;
+
+  --color-light: hsl(40, 23%, 97%);
+  --color-dark: hsl(42, 15%, 13%);
+  --color-accent: hsl(184, 77%, 34%);
+  --color-accent_light: #18aab7;
+
+  --fs-h1: 3rem;
+  --fs-h2: 2.25rem;
+  --fs-h3: 1.25rem;
+  --fs-body: 1rem;
+}
+
+@media (min-width: 800px) {
+  :root {
+    --fs-h1: 4.5rem;
+    --fs-h2: 3.75rem;
+    --fs-h3: 1.5rem;
+    --fs-body: 1.125rem;
+  }
+}
+
+
+/* ---- General styles ---- */
+
+body {
+  background: var(--color-light);
+  color: var(--color-dark);
+  font-family: var(--ff-body);
+  font-size: var(--fs-body);
+  line-height: 1.6;
+}
+
+
+
+/* ----- Basic topography ------ */
+
+h1,
+h2,
+h3 {
+  line-height: 1.1;
+  font-family: var(--ff-header);
+}
+
+h1 {
+  font-size: var(--fs-h1);
+}
+
+h2 {
+  font-size: var(--fs-h2);
+}
+
+h3 {
+  font-size: var(--fs-h3);
+}
+
+
+.logo {
+  filter: invert(46%) sepia(65%) saturate(540%) hue-rotate(136deg) brightness(89%) contrast(94%);
+}
