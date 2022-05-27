@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nicole Barnabee-Burns | Web Development</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Raleway:wght@400;500;600&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="./assets/main.css">
+</head>
+
+<body>
+
+  <header class="header-top">
+    <a href="./index.html"><img class="logo" src="./assets/images/logo-dark.svg" alt="Return to homepage"></a>
+
+    <div class="dropmenu">
+      <div class="dropmenu-burger">
+      </div>
+    </div>
+
+    <nav class="menu">
+      <ul class="links">
+        <li><a href="#about" class="drop-link">About</a></li>
+        <li><a href="./services.html" class="drop-link">Services</a></li>
+        <li><a href="#projects" class="drop-link">Projects</a></li>
+        <li><a href="#contact" class="drop-link">Contact</a></li>
+      </ul>
+      <ul class="social-media">
+        <li><a href="https://twitter.com/NicoleBarnabee"><img src="./assets/images/twitter-black.svg" alt="Twitter"></a>
+        </li>
+        <li><a href="#"><img src="assets/images/linkedin-black.svg" alt="LinkedIn"></a>
+        </li>
+        <li><a href="#"><img src="./assets/images/github-black.svg" alt="GitHub"></a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="body-stack index">
+    <div class="main-text stack">
+      <h1 class="heading">My name is Nicole and I have a mission.</h1>
+      <p class="txt-large">The purpose of the web is communication, and I want to help you broadcast your message to the
+        widest possible audience.</p>
+      <p class="txt-large">That's why I'm dedicated to building sites that are <b>fast</b>, <b>lightweight</b>, and
+        <b>accessible</b>.
+      </p>
+      <button type="button">Tell me more!</button>
+      <button type="button">I need a website!</button>
+    </div>
+    <img src="./assets/images/avatar.webp" alt="It's me!">
+  </main>
+
+  <div id="about" class="spacer"> </div>
+
+  <section class="about" aria-labelledby="about-section">
+    <div class="about-text stack">
+      <h2 id="about-section" class="heading">About me</h2>
+      <p>I've been immersed in the world of computers since I was a kid. Back then, high speed internet existed only
+        in
+        the world of science fiction, and low bandwidth is still a concern for millions of people around the world.
+      </p>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis, hic? Sunt eius nam voluptatem
+        voluptatum
+        voluptas fugiat laboriosam distinctio sapiente?</p>
+    </div>
+    <div class="about-img">
+      <img src="./assets/images/computers.webp" alt="A row of early computers">
+      <small class="attribution">Photo by <a href="https://unsplash.com/@alexmotoc">Alex Motoc</a> on <a
+          href="https://unsplash.com/">Unsplash</a></small>
+    </div>
+  </section>
+
+  <div id="projects" class="spacer"></div>
+
+  <section class="projects" aria-labelledby="projects-section">
+    <h2 id="projects-section" class="heading">Latest projects</h2>
+    <section class="container">
+      <figure class="card">
+        <img src="./assets/images/showthework.webp" alt="">
+        <figcaption>
+          <h3 class="heading">Lorem ipsum dolor sit.</h3>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea, atque?</p>
+        </figcaption>
+      </figure>
+      <figure class="card">
+        <img src="./assets/images/showthework.webp" alt="">
+        <figcaption>
+          <h3 class="heading">Lorem ipsum dolor sit.</h3>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae, accusamus!</p>
+        </figcaption>
+      </figure>
+      <figure class="card">
+        <img src="./assets/images/showthework.webp" alt="">
+        <figcaption>
+          <h3 class="heading">Lorem ipsum dolor sit.</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, voluptatem!</p>
+        </figcaption>
+      </figure>
+    </section>
+
+  </section>
+
+  <div id="contact" class="spacer"></div>
+
+  <section class="contact stack" aria-labelledby="contact-section">
+    <h2 id="contact-section" class="heading">Contact me</h2>
+    <p class="contact-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi recusandae repellendus
+      officia quo dolores consequatur?</p>
+    <form method="post" action="#">
+      <input type="text" name="name" id="name" placeholder="Name">
+      <input type="email" name="email" id="email" placeholder="Email">
+      <input type="text" name="subject" id="subject" placeholder="Subject">
+      <textarea name="message" id="message" placeholder="Message" rows="6"></textarea>
+      <button disabled>Send Message</button>
+      <button type="reset">Reset Form</button>
+    </form>
+  </section>
+
+  <footer>
+    <ul class="social-media">
+      <li><a href="https://twitter.com/NicoleBarnabee"><img src="./assets/images/twitter-black.svg" alt="Twitter"></a>
+      </li>
+      <li><a href="#"><img src="assets/images/linkedin-black.svg" alt="LinkedIn"></a>
+      </li>
+      <li><a href="#"><img src="./assets/images/github.svg" alt="GitHub"></a>
+      </li>
+    </ul>
+    <p class="copyright"><small>
+        &copy; 2022, Nicole Barnabee-Burns. All rights reserved.<small>
+    </p>
+  </footer>
+
+  <script src="./assets/main.js"></script>
+</body>
+
+</html>
