@@ -206,10 +206,6 @@ nav {
   color: var(--color-accent_light);
 }
 
-.nav-toggle {
-  outline: 1px solid black;
-}
-
 .nav__list .social-list__icon {
   font-size: 32px;
   color: var(--color-light);
@@ -218,7 +214,60 @@ nav {
 
 /* ------ hamburger -------- */
 
+.nav-toggle {
+  padding: 1em;
+  background: transparent;
+  cursor: pointer;
+  position: absolute;
+  top: 0.7em;
+  right: 0.5em;
+  z-index: 999;
+}
 
+/* note the padding on the toggle: since that is the link, you want to pad it out a bit, as otherwise ONLY the middle line will be clickable */
+
+.hamburger {
+  display: block;
+  position: relative;
+}
+
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+  background: var(--color-darker);
+  width: 2em;
+  height: 3px;
+  border-radius: 1em;
+  transition: transform 250ms ease-in-out;
+}
+
+.hamburger::before,
+.hamburger::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+/* Some notes about hamburger buttons:  in this case, the position relative/position absolute combo means that a display type doesn't need to be specified.  That, plus left and right of 0 means that the pseudo-elements will match the width of the parent element.   All pseudo elements require a content, even if that content is blank,
+
+At this point the three lines are stacked on each other
+*/
+
+.hamburger::before {
+  top: 9px;
+}
+
+.hamburger::after {
+  bottom: 9px;
+}
+
+
+/* ------ navigation controls ----- */
+
+.nav-open {
+  background-color: red;
+}
 
 
 
