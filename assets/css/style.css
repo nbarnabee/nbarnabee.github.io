@@ -169,7 +169,7 @@ h3 {
 
 /* ----- nav bar --------------- */
 
-header {
+.header {
   padding: 1em;
   display: flex;
   justify-content: space-between;
@@ -224,6 +224,11 @@ nav {
   z-index: 999;
 }
 
+.nav-toggle:focus {
+  outline: 0;
+  transform: scale(1.2);
+}
+
 /* note the padding on the toggle: since that is the link, you want to pad it out a bit, as otherwise ONLY the middle line will be clickable */
 
 .hamburger {
@@ -265,8 +270,32 @@ At this point the three lines are stacked on each other
 
 /* ------ navigation controls ----- */
 
-.nav-open {
-  background-color: red;
+.nav-open .nav {
+  transform: translateX(0);
+  transition: transform 250ms ease-in-out;
+}
+
+.nav-open .nav-toggle {
+  position: fixed;
+}
+
+.nav-open .hamburger {
+  transform: rotate(0.625turn);
+}
+
+.nav-open .hamburger::after {
+  opacity: 0;
+}
+
+.nav-open .hamburger::before {
+  transform: rotate(90deg) translateX(-9px);
+}
+
+/* This rotational combo turns it into an X.  the amount of translation should equal the offset, so 9 px in this case */
+
+.nav-open .hamburger,
+.nav-open .hamburger::before {
+  background-color: var(--color-light);
 }
 
 
