@@ -5,12 +5,13 @@
   --ff-body: "Open Sans", Verdana, Geneva, Tahoma, sans-serif;
 
   --color-light: hsl(40, 23%, 97%);
-  --color-dark: hsl(42, 15%, 13%);
+  --color-darker: hsl(42, 15%, 13%);
+  --color-dark: #333143;
   --color-accent: hsl(184, 77%, 34%);
   --color-accent_light: #18aab7;
 
   --fs-h1: 3rem;
-  --fs-h2: 2.25rem;
+  --fs-h2: 2rem;
   --fs-h3: 1.25rem;
   --fs-body: 1rem;
 
@@ -18,9 +19,14 @@
     0.125em 0.125em 0.25em rgba(0, 0, 0, 15%);
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 800px) {
   :root {
     --fs-h1: 4.5rem;
+  }
+}
+
+@media (min-width: 1000px) {
+  :root {
     --fs-h2: 3rem;
     --fs-h3: 1.5rem;
     --fs-body: 1.125rem;
@@ -62,7 +68,7 @@ p+p {
   display: inline-block;
   padding: 0.5em 2.5em;
   background-color: var(--color-accent);
-  color: var(--color-dark);
+  color: var(--color-darker);
   text-decoration: none;
   cursor: pointer;
   letter-spacing: 1.1px;
@@ -116,6 +122,7 @@ h3 {
 .section__subtitle {
   margin-bottom: 1em;
   font-size: var(--fs-h3);
+  color: var(--color-darker);
 }
 
 
@@ -160,27 +167,33 @@ nav {
 
 .intro {
   position: relative;
+  margin-block: 20vw;
 }
 
 .section__subtitle--intro {
   text-align: right;
 }
 
-@media (min-width: 700px) {
+@media (min-width: 600px) {
   .intro {
     display: grid;
     width: min-content;
-    margin: 0 auto 4em auto;
+    margin-block: 10vw;
+    margin-inline: auto;
     grid-column-gap: 1em;
     grid-template-areas:
-      "img title"
-      "img subtitle";
-    grid-template-columns: min-content max-content;
+      "spacer title"
+      "subtitle subtitle";
+    grid-template-columns: 20vw max-content;
   }
 
-  .intro__img {
-    grid-area: img;
-    min-width: 20vw;
+  .intro__spacer {
+    margin-bottom: 5px;
+    grid-area: spacer;
+    background-image: url("../images/undraw_proud_coder_re_exuy.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right center;
   }
 
   .section__title--intro {
@@ -199,7 +212,7 @@ nav {
 .services {
   background-color: var(--color-dark);
   color: var(--color-light);
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0.30) 40%, rgba(0, 0, 0, 0.75) 100%), url("../images/sergey-zolkin-handsoncomputer-small.jpg");
+  background: linear-gradient(to bottom, rgba(51, 49, 67, 0.25) 0%, rgba(51, 49, 67, 0.4) 40%, rgba(51, 49, 67, 0.85) 100%), url("../images/sergey-zolkin-handsoncomputer-small.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -247,18 +260,21 @@ nav {
 
 /* ---  about --------  */
 
-.about__img {
-  box-shadow: var(--bs);
+.section__subtitle--about {
+  width: 100%
 }
 
-@media (min-width: 700px) {
+
+@media (min-width: 875px) {
+
+
   .about {
     display: grid;
-    grid-template-columns: 1fr 300px;
+    grid-template-columns: 1fr 1fr;
     grid-template-areas:
-      "title img"
-      "subtitle img"
-      "text img";
+      "title title"
+      "subtitle subtitle"
+      "text text";
     grid-column-gap: 1em;
     position: relative;
     max-width: 1100px;
@@ -273,14 +289,33 @@ nav {
   .section__subtitle--about {
     grid-column: 1/-1;
     grid-area: subtitle;
-    width: calc(100% + 1em);
+    width: calc(100% + 20vw);
     margin-bottom: 0.6em;
   }
 
+  .about__text {
+    grid-area: text;
+    background-image: url("../images/undraw_learning_sketching_nd4f.svg");
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: contain;
+  }
+
+  .about__text p {
+    width: 50ch;
+  }
 
   .about__img {
     grid-area: img;
     margin-top: 1em;
+    min-width: 100px;
+  }
+
+}
+
+@media (min-width: 1100px) {
+  .about__text {
+    background-position: 90%;
   }
 }
 
@@ -320,39 +355,59 @@ nav {
 .portfolio__item:focus .portfolio__img,
 .portfolio__img:hover {
   transform: scale(1.2);
-  opacity: 50%;
+  opacity: 40%;
 }
 
 
 
 /* ------- Contact ------- */
 
+.contact {
+  padding-bottom: 0;
+}
+
 .section__title--contact::after {
-  margin: 0.1em 0;
-  height: 10px;
-  width: 75%;
+  margin: 0.1em auto 0 auto;
+  height: 8px;
+  width: 100%;
 }
 
 .contact__form {
   display: flex;
   flex-direction: column;
-  gap: 0.4em;
+  gap: 0.6em;
 }
 
-.contact__form input {
-  width: min(300px, 100%);
+.contact__form input,
+.contact__form textarea {
+  width: 100%;
 }
 
 .contact .btn {
+  margin-top: 0.4em;
   padding-inline: 1.5em;
   background-color: var(--color-accent_light);
-  align-self: flex-start;
+  align-self: center;
 }
 
 .social-list {
   display: flex;
-  gap: 0.5em;
-  margin-top: 2em;
+  gap: 1em;
+  margin-block: 1.5em;
+  justify-content: center;
+}
+
+.social-list__item:hover {
+  opacity: 0.7;
+}
+
+.social-list__link:focus {
+  outline-offset: 3px;
+}
+
+.social-list__icon {
+  font-size: 32px;
+  color: var(--color-darker);
 }
 
 
@@ -368,10 +423,15 @@ nav {
     grid-gap: 1em;
     max-width: 1000px;
     margin-inline: auto;
+    padding-bottom: 20px;
   }
 
   .section__title--contact {
     grid-area: title;
+  }
+
+  .section__title--contact::after {
+    height: 15px;
   }
 
   .contact__text {
@@ -384,5 +444,14 @@ nav {
 
   .social-list {
     grid-area: socials;
+    margin-block: 0;
   }
+}
+
+
+/* ------  footer -------- */
+
+footer {
+  text-align: center;
+  font-size: 0.8em;
 }
