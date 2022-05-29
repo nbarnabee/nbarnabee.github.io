@@ -491,7 +491,7 @@ At this point the three lines are stacked on each other
 }
 
 .portfolio__item {
-  background-color: var(--color-accent);
+  background-color: var(--color-dark);
   overflow: hidden;
 }
 
@@ -503,7 +503,7 @@ At this point the three lines are stacked on each other
 .portfolio__item:focus .portfolio__img,
 .portfolio__img:hover {
   transform: scale(1.2);
-  opacity: 40%;
+  opacity: 50%;
 }
 
 
