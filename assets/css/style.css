@@ -129,7 +129,8 @@ h3 {
 
 
 .section__subtitle--intro,
-.section__subtitle--about {
+.section__subtitle--about,
+.section__subtitle--project {
   background: var(--color-accent_light);
   padding: 0.25em;
   font-weight: 400;
@@ -158,8 +159,8 @@ h3 {
   justify-content: center;
 }
 
-.social-list__item:hover {
-  color: var(--color-accent_light);
+.social-list__icon:hover {
+  color: var(--color-accent_light) !important;
 }
 
 .social-list__link:focus {
@@ -534,10 +535,6 @@ At this point the three lines are stacked on each other
   margin-block: 1.5em;
 }
 
-.contact .social-list__icon {
-  color: var(--color-darker);
-}
-
 
 @media (min-width: 850px) {
 
@@ -586,8 +583,14 @@ At this point the three lines are stacked on each other
   flex-direction: column;
   align-items: center;
   gap: 0.25em;
+  margin-bottom: 0.5em;
+  margin-top: 3em;
 }
 
 footer>small {
   font-size: 0.8em;
+}
+
+.footer .social-list__icon {
+  color: var(--color-darker);
 }
