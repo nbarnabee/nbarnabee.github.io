@@ -17,6 +17,8 @@
 
   --bs: 0.25em 0.25em 0.75em rgba(0, 0, 0, 25%),
     0.125em 0.125em 0.25em rgba(0, 0, 0, 15%);
+
+  scroll-behavior: smooth;
 }
 
 @media (min-width: 800px) {
@@ -150,20 +152,77 @@ h3 {
 }
 
 
+.social-list {
+  display: flex;
+  gap: 1em;
+  justify-content: center;
+}
+
+.social-list__item:hover {
+  color: var(--color-accent_light);
+}
+
+.social-list__link:focus {
+  outline-offset: 3px;
+}
 
 
 /* ----- nav bar --------------- */
 
-.logo>img {
-  height: 64px;
+header {
+  padding: 1em;
+  display: flex;
+  justify-content: space-between;
 }
+
+nav {
+  background-color: var(--color-dark);
+  color: var(--color-light);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 100;
+
+  transform: translateX(100%);
+  transition: transform 250ms ease-in-out;
+}
+
+.nav__list {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5em;
+}
+
+.nav__link {
+  font-size: var(--fs-h3);
+}
+
+.nav__link:hover {
+  color: var(--color-accent_light);
+}
+
+.nav-toggle {
+  outline: 1px solid black;
+}
+
+.nav__list .social-list__icon {
+  font-size: 32px;
+  color: var(--color-light);
+}
+
+
+/* ------ hamburger -------- */
+
+
+
 
 
 /*-------- intro section ----------*/
-
-nav {
-  display: none;
-}
 
 .intro {
   position: relative;
@@ -390,22 +449,11 @@ nav {
   align-self: center;
 }
 
-.social-list {
-  display: flex;
-  gap: 1em;
+.contact .social-list {
   margin-block: 1.5em;
-  justify-content: center;
 }
 
-.social-list__item:hover {
-  opacity: 0.7;
-}
-
-.social-list__link:focus {
-  outline-offset: 3px;
-}
-
-.social-list__icon {
+.contact .social-list__icon {
   font-size: 32px;
   color: var(--color-darker);
 }
@@ -442,7 +490,7 @@ nav {
     grid-area: form;
   }
 
-  .social-list {
+  .contact .social-list {
     grid-area: socials;
     margin-block: 0;
   }
