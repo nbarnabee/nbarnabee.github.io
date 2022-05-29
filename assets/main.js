@@ -5,5 +5,5 @@ navToggle.addEventListener("click", () => {
 
 const navLinks = Array.from(document.getElementsByClassName("nav__link"));
 navLinks.forEach(link => link.addEventListener("click", () => {
-  document.body.classList.toggle("nav-open");
+  document.body.classList.remove("nav-open");
 }));
