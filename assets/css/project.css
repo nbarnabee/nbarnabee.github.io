@@ -1,0 +1,21 @@
+.project {
+  margin: 2em auto;
+  max-width: 1200px;
+}
+
+p+* {
+  margin-top: 1em;
+}
+
+@media (min-width: 800px) {
+
+  .project__main {
+    display: grid;
+    grid-template-columns: 40% 1fr;
+    grid-gap: 1em;
+  }
+
+  .project__details>* {
+    max-width: 60ch;
+  }
+}
