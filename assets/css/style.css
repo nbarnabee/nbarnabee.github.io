@@ -184,6 +184,10 @@ h3,
   z-index: 5;
 }
 
+.header > a {
+  margin-top: 0.5rem;
+}
+
 .nav-small {
   background-color: var(--color-dark);
   color: var(--color-light);
@@ -233,6 +237,7 @@ h3,
   top: 0.7em;
   right: 0.5em;
   z-index: 999;
+  margin-top: 0.4rem;
 }
 
 .nav-toggle:focus {
@@ -326,12 +331,16 @@ At this point the three lines are stacked on each other
     gap: 2rem;
     padding-right: 1rem;
   }
+
+  .header > a {
+    margin-top: 0;
+  }
 }
 
 /*-------- intro section ----------*/
 
 .intro {
-  margin-block: 65px;
+  margin-block: 70px;
   background-color: var(--color-dark);
   color: var(--color-light);
   background: linear-gradient(
@@ -344,7 +353,13 @@ At this point the three lines are stacked on each other
   background-repeat: no-repeat;
   background-position: 50% 40%;
   background-size: cover;
-  padding-block: 4em;
+  padding-block: 4rem;
+}
+
+@media (min-width: 900px) {
+  .intro {
+    padding-block: 6rem;
+  }
 }
 
 .intro__text {
