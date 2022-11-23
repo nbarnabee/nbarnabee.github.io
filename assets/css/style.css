@@ -113,7 +113,7 @@ h3 {
 
 .section__title--intro strong {
   font-weight: 600;
-  display: block;
+  /* display: block; */
 }
 
 .section__subtitle {
@@ -301,18 +301,39 @@ At this point the three lines are stacked on each other
 /*-------- intro section ----------*/
 
 .intro {
-  position: relative;
-  margin-block: 20vw;
+  margin-block: 60px;
+  background-color: var(--color-dark);
+  color: var(--color-light);
+  background: linear-gradient(
+      to bottom,
+      rgba(51, 49, 67, 0.25) 0%,
+      rgba(51, 49, 67, 0.4) 40%,
+      rgba(51, 49, 67, 0.85) 100%
+    ),
+    url("../images/sergey-zolkin-handsoncomputer-small.jpg");
+  background-repeat: no-repeat;
+  background-position: 50% 40%;
+  background-size: cover;
+  padding-block: 4em;
+}
+
+.intro__text {
+  width: 80%;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
 
 .section__subtitle--intro {
   text-align: right;
+  width: 100%;
 }
 
 @media (min-width: 600px) {
-  .intro {
+  /* .intro {
     display: grid;
-    width: min-content;
+    width: 100%;
     margin-block: 10vw;
     margin-inline: auto;
     grid-column-gap: 1em;
@@ -339,7 +360,7 @@ At this point the three lines are stacked on each other
     align-self: start;
     grid-column: -1/1;
     grid-row: 2;
-  }
+  } */
 }
 
 /*-------- services -----------*/
