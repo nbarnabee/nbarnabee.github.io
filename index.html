@@ -38,11 +38,17 @@
     <button class="nav-toggle" aria-label="toggle-navigation">
       <span class="hamburger"></span>
     </button>
-    <nav class="nav">
-      <ul class="nav__list">
+    <nav class="nav-large" aria-label="wide-screen">
+      <ul class="nav__list--flex">
+        <li class="nav__item"><a href="#about">About</a></li>
+        <li class="nav__item"><a href="#about">Blog</a></li>
+      </ul>
+    </nav>
+    <nav class="nav-small" aria-label="small-screen">
+      <ul class="nav__list--toggle">
         <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
-        <li class="nav__item"><a href="#work" class="nav__link">My Work</a></li>
-        <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+        <!-- <li class="nav__item"><a href="#work" class="nav__link">My Work</a></li>
+        <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li> -->
 
         <ul class="social-list">
 
