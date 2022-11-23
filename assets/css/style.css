@@ -166,9 +166,10 @@ h3 {
 /* ----- nav bar --------------- */
 
 .header {
-  padding: 1em;
+  padding: 1rem;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   background-color: var(--color-light);
   opacity: 0.95;
   position: fixed;
@@ -178,7 +179,7 @@ h3 {
   z-index: 5;
 }
 
-.nav {
+.nav-small {
   background-color: var(--color-dark);
   color: var(--color-light);
   position: fixed;
@@ -192,7 +193,11 @@ h3 {
   transition: transform 250ms ease-in-out;
 }
 
-.nav__list {
+.nav-large {
+  display: none;
+}
+
+.nav__list--toggle {
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -209,7 +214,7 @@ h3 {
   color: var(--color-accent_light);
 }
 
-.nav__list .social-list__icon {
+.nav__list--toggle .social-list__icon {
   color: var(--color-light);
 }
 
@@ -270,7 +275,7 @@ At this point the three lines are stacked on each other
 
 /* ------ navigation controls ----- */
 
-.nav-open .nav {
+.nav-open .nav-small {
   transform: translateX(0);
   transition: transform 250ms ease-in-out;
 }
@@ -298,10 +303,31 @@ At this point the three lines are stacked on each other
   background-color: var(--color-light);
 }
 
+/* ------ Nav bar for bigger screens  -------- */
+/* --  Or, now let's get rid of everything I just wrote -- */
+
+@media (min-width: 600px) {
+  .nav-toggle {
+    display: none;
+  }
+
+  .nav-large {
+    display: block;
+  }
+
+  .nav__list--flex {
+    display: flex;
+    font-size: var(--fs-h3);
+    gap: 2rem;
+    padding-right: 1rem;
+    font-weight: 800;
+  }
+}
+
 /*-------- intro section ----------*/
 
 .intro {
-  margin-block: 60px;
+  margin-block: 65px;
   background-color: var(--color-dark);
   color: var(--color-light);
   background: linear-gradient(
