@@ -49,7 +49,7 @@ body {
 }
 
 section {
-  padding: 5em 2em;
+  padding: 5rem 2rem;
 }
 
 :focus {
@@ -57,12 +57,8 @@ section {
   outline-offset: 3px;
 }
 
-p {
-  max-width: 70ch;
-}
-
 p + p {
-  margin-block: 1em;
+  margin-block: 1rem;
 }
 
 /* ----- Buttons -------- */
@@ -126,6 +122,14 @@ h4,
   font-family: var(--ff-header);
 }
 
+.accent-text {
+  color: var(--color-accent_light);
+}
+
+.underline-text {
+  text-decoration: underline;
+}
+
 .section__title {
   margin-bottom: 0.25em;
 }
@@ -151,6 +155,7 @@ h4,
   padding: 0.25em;
   margin-top: -0.5rem;
   font-weight: 400;
+  height: 2rem;
   color: var(--color-light);
 }
 
@@ -160,7 +165,7 @@ h4,
   }
 }
 
-/* ------  Repeating features -------- */
+/* ------  Repeating features/elements -------- */
 
 /* .section__title--services::after,
 .section__title--work::after,
@@ -174,27 +179,16 @@ h4,
   background-color: var(--color-accent);
 } */
 
-.social-list {
-  display: flex;
-  gap: 1.75em;
-  justify-content: center;
-}
-
-.social-list__icon:hover {
-  color: var(--color-accent_light) !important;
-}
-
-.social-list__link:focus {
-  outline-offset: 3px;
-}
-
-.social-list__icon {
-  font-size: 32px;
-}
-
 .text-block {
-  max-width: 70ch;
+  max-width: 65ch;
   margin-inline: auto;
+}
+
+.dividing-line {
+  max-width: 60ch;
+  margin-inline: auto;
+  height: 1px;
+  background-color: var(--color-dark-grey);
 }
 
 /* ----- nav bar --------------- */
@@ -218,6 +212,7 @@ h4,
 }
 
 .nav-small {
+  display: block;
   background-color: var(--color-dark);
   color: var(--color-light);
   position: fixed;
@@ -354,6 +349,10 @@ At this point the three lines are stacked on each other
     display: block;
   }
 
+  .nav-small {
+    display: none;
+  }
+
   .nav__list--flex {
     display: flex;
     font-size: var(--fs-h3);
@@ -383,6 +382,26 @@ At this point the three lines are stacked on each other
   .header > a {
     margin-top: 0;
   }
+}
+
+/* ------ Social media links -------- */
+
+.social-list {
+  display: flex;
+  gap: 1.75em;
+  justify-content: center;
+}
+
+.social-list__icon:hover {
+  color: var(--color-accent_light) !important;
+}
+
+.social-list__link:focus {
+  outline-offset: 3px;
+}
+
+.social-list__icon {
+  font-size: 32px;
 }
 
 /*-------- intro section ----------*/
