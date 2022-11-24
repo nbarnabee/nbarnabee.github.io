@@ -7,7 +7,7 @@
   --color-light: hsl(40, 23%, 97%);
   --color-darker: hsl(42, 15%, 13%);
   --color-dark: #333143;
-  --color-dark-grey: hsl(42, 1%, 50%);
+  --color-dark-grey: hsl(40, 1%, 60%);
   --color-accent: hsl(184, 77%, 34%);
   --color-accent_light: #18aab7;
 
@@ -48,7 +48,8 @@ body {
   line-height: 1.6;
 }
 
-section {
+section,
+article {
   padding: 5rem 2rem;
 }
 
