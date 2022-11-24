@@ -332,6 +332,25 @@ At this point the three lines are stacked on each other
     padding-right: 1rem;
   }
 
+  .nav__list--flex > li {
+    position: relative;
+  }
+
+  .nav__list--flex > li::after {
+    content: "";
+    display: block;
+    height: 2px;
+    position: absolute;
+    width: 0;
+    background-color: var(--color-accent_light);
+    transition: 0.3s;
+  }
+
+  .nav__list--flex > li:hover::after {
+    width: 100%;
+    transition: all linear 250ms;
+  }
+
   .header > a {
     margin-top: 0;
   }
@@ -373,39 +392,6 @@ At this point the three lines are stacked on each other
 .section__subtitle--intro {
   text-align: right;
   width: 100%;
-}
-
-@media (min-width: 600px) {
-  /* .intro {
-    display: grid;
-    width: 100%;
-    margin-block: 10vw;
-    margin-inline: auto;
-    grid-column-gap: 1em;
-    grid-template-areas:
-      "spacer title"
-      "subtitle subtitle";
-    grid-template-columns: 20vw max-content;
-  }
-
-  .intro__spacer {
-    margin-bottom: 5px;
-    grid-area: spacer;
-    background-image: url("../images/undraw_proud_coder_re_exuy.svg");
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: right center;
-  }
-
-  .section__title--intro {
-    margin-bottom: -0.01em;
-  }
-
-  .section__subtitle--intro {
-    align-self: start;
-    grid-column: -1/1;
-    grid-row: 2;
-  } */
 }
 
 /*-------- services -----------*/
