@@ -53,6 +53,13 @@ article {
   padding: 5rem 2rem;
 }
 
+section,
+article,
+header {
+  max-width: 1600px;
+  margin-inline: auto;
+}
+
 :focus {
   outline: 3px solid var(--color-accent_light);
   outline-offset: 3px;
