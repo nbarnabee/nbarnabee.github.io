@@ -363,7 +363,7 @@ At this point the three lines are stacked on each other
 
   .nav__list--flex {
     display: flex;
-    font-size: var(--fs-h3);
+    font-size: var(--fs-h4);
     gap: 2rem;
     padding-right: 1rem;
   }
