@@ -193,7 +193,7 @@ h4,
 }
 
 .dividing-line {
-  max-width: 60ch;
+  width: min(60ch, 80%);
   margin-inline: auto;
   height: 1px;
   background-color: var(--color-dark-grey);
