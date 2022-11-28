@@ -60,6 +60,12 @@ header {
   margin-inline: auto;
 }
 
+@media (min-width: 900px) {
+  .reduced-width {
+    max-width: min(1600px, 75%);
+  }
+}
+
 :focus {
   outline: 3px solid var(--color-accent_light);
   outline-offset: 3px;
@@ -118,6 +124,10 @@ h4,
 }
 
 .bold-text {
+  font-weight: 600;
+}
+
+.boldest-text {
   font-weight: 800;
 }
 
@@ -144,10 +154,6 @@ h4,
 
 .section__title--intro {
   font-weight: 300;
-}
-
-.section__title--intro strong {
-  font-weight: 600;
 }
 
 .section__subtitle {
