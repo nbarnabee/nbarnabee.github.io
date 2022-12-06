@@ -90,6 +90,11 @@ p + p {
   }
 }
 
+.blog p + p:last-of-type,
+p + p:last-of-type {
+  margin-bottom: 0;
+}
+
 /* ----- Buttons -------- */
 
 .btn {
