@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../assets/css/boilerplate.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+
+  <!-- fonts -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Raleway:ital,wght@0,300;0,400;0,600;0,700;1,300&display=swap"
+    rel="stylesheet">
+
+  <!-- font awesome -->
+  <script src="https://kit.fontawesome.com/ce239c50a9.js" crossorigin="anonymous" async></script>
+  <title>Blog | Introducing Toolhunt</title>
+</head>
+
+<body>
+  <header class="header reduced-width">
+    <span class="big-text header-text bold-text">&lt;/n&gt;</span>
+    <button class="nav-toggle" aria-label="toggle-navigation">
+      <span class="hamburger"></span>
+    </button>
+    <nav class="nav-large" aria-label="wide-screen">
+      <ul class="nav__list--flex">
+        <li class="nav__item"><a href="../">Home</a></li>
+        <li class="nav__item"><a href="./index.html">Blog</a></li>
+        <li class="nav__item"><a href="../contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <nav class="nav-small" aria-label="small-screen">
+      <ul class="nav__list--toggle">
+        <li class="nav__item"><a href="../" class="nav__link">Home</a></li>
+        <li class="nav__item"><a href="./index.html" class="nav__link">Blog</a></li>
+        <li class="nav__item"><a href="../contact.html" class="nav__link">Contact</a></li>
+
+        <ul class="social-list">
+
+          <li class="social-list__item"><a href="https://www.linkedin.com/in/nicole-barnabee-burns/"
+              class="social-list__link" target="_blank">
+              <i class="fa-brands fa-linkedin social-list__icon"></i></a></li>
+
+          <li class="social-list__item"><a href="https://twitter.com/NicoleBarnabee" class="social-list__link"
+              target="_blank">
+              <i class="fa-brands fa-twitter social-list__icon"></i></a>
+          </li>
+
+          <li class="social-list__item"><a href="https://github.com/nbarnabee" class="social-list__link"
+              target="_blank">
+              <i class="fa-brands fa-github social-list__icon"></i></a></li>
+
+          <li class="social-list__item"><a href="mailto:nicole.barnabee@gmail.com" class="social-list__link"
+              target="_blank">
+              <i class="fa-solid fa-envelope social-list__icon"></i></a>
+          </li>
+        </ul>
+
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="intro reduced-width" id="home">
+      <div class="intro__text">
+        <h1 class="section__title section__title--intro">
+          <span class="bold-text">Blog Posts</span>
+        </h1>
+        <div class="section__subtitle section__subtitle--intro accent-text" style="margin-top: -0.5rem ">
+          </>
+        </div>
+        <div class="intro__spacer"></div>
+    </section>
+
+    <section>
+      <article class="text-block blog-post">
+        <h3 class="biggest-text">An Introduction to Toolhunt</h3>
+        <p class="bigger-text italic-text header-text">January 10, 2023</p>
+        <p>
+          Happy New Year’s, everyone, and welcome to the third installment of my Outreachy internship blog posts.
+          &nbsp;I keep
+          mentioning this internship, and it’s about time that I explained what I’m actually doing here.
+        <p>
+          <a href="https://www.outreachy.org/" target="_blank" class="underline-text">Outreachy</a> is an organization
+          that
+          provides internships
+          with open source and open science organizations. I’m not interning <i>with</i> them, as such. &nbsp;Rather,
+          I’ve
+          been placed into an internship with the <a href="https://wikimediafoundation.org/" target="_blank"
+            class="underline-text">Wikimedia
+            Foundation</a>.
+        </p>
+        <p>
+          Everyone’s heard of Wikipedia, of course, but it’s just one of many <a
+            href="https://wikimediafoundation.org/our-work/wikimedia-projects/#a1-reference" target="_blank"
+            class="underline-text">free
+            knowledge projects</a> hosted by the Foundation (albeit the most well-known one).&nbsp; Needless to say,
+          it's a big place, in which I occupy a very tiny corner within a sub-project called Toolhub.
+        </p>
+
+        <p>
+          <a href="https://toolhub.wikimedia.org/" target="_blank" class="underline-text">Toolhub</a> is
+          a catalog of software
+          applications which interact with Wikimedia projects. &nbsp;We’re talking things like scripts, bots, and web
+          and
+          mobile applications. &nbsp;Essentially, a “tool” is a software application that can be used to improve a
+          user’s
+          experience when interacting with a Wikimedia project.
+        </p>
+
+        <p>
+          Each tool has its own Wikimedia page, where users can find information, such as the tool’s description,
+          software license, and the languages its interface has been translated into, as well as additional links, for
+          instance to a GitHub repository or to developer documentation.
+        </p>
+        <p>
+          In many cases, however, these pages
+          aren’t very
+          well fleshed out, and the tools lack documentation and other information that could make them easier to
+          understand and use.
+        </p>
+
+        <p>
+          Once a tool has been registered on Toolhub and its record created in the database, there are some pieces of
+          information about it &mdash; such as its name and its author &mdash; that can’t be changed. &nbsp;But there
+          are other
+          pieces
+          that can be added or edited.
+        </p>
+
+        <p>
+          These make up what’s called the “annotation layer” in the database record and
+          include such things as an associated icon, the type of tool (e.g., a bot or a web app), and links to
+          documentation.
+        </p>
+
+        <p>
+          Essentially, my task, along with fellow intern Hannah Njoroge and our mentors <a
+            href="https://twitter.com/iamslavina" target="_blank" class="underline-text">Slavina</a> and <a
+            href="https://twitter.com/laredoyin" target="_blank" class="underline-text">Damilare</a>, is to
+          design and deploy a web app (Toolhunt) that searches Toolhub’s database, locates tools that are missing
+          information in the annotation layer (which is just about all of them), and presents these gaps in the data as
+          if they were challenges for the user to solve, e.g. &nbsp;“We’re missing a link to this tool’s repository.
+          &nbsp;Can you
+          find it?”
+        </p>
+        <p>
+          Ultimately, we’re trying to convince people to help us fill information holes, and in order to do
+          that we need to make it as easy and rewarding as possible.
+        </p>
+
+        <p>
+          The project was inspired by another tool, <a href="https://citationhunt.toolforge.org/en?id=66c67a94"
+            target="_blank" class="underline-text">Citation Hunt</a>, which does a similar thing with Wikipedia
+          articles.
+        </p>
+        <p>
+          Have you ever
+          been
+          browsing Wikipedia and come across the tag “[citation needed]”? &nbsp;
+          Citation Hunt displays the snippets of
+          articles marked with this tag and invites the user to search for a reliable source and add it to Wikipedia.
+          &nbsp;In
+          order to encourage a little friendly competition, Citation Hunt tracks user contributions and presents this
+          information in a leader-board.
+        </p>
+
+        <p>
+          We’re doing the same with Toolhunt.&nbsp; in addition to the editing interface, the application will include a
+          leader-board as well as dashboard where users can keep track of their personal contributions, the latest
+          global contributions, and the overall state of the project.
+        </p>
+
+        <p>
+          But maybe it’s easier to show than to tell. &nbsp;As part of the application process,
+          candidates were asked to design a mock front-end for the project.
+        </p>
+        <p>
+          Although the design isn’t going to be
+          quite
+          the same
+          (Hannah’s design for the homepage was much less busy than mine), you can get a pretty good idea of what the
+          final project is intended to do from my <a href="https://nbarnabee.github.io/outreachy/index.html"
+            target="_blank" class="underline-text">
+            preliminary
+            work
+          </a>. &nbsp;(And if you'd like to see the code behind it, here's <a
+            href="https://github.com/nbarnabee/outreachy" target="_blank" class="underline-text">the repository</a>.)
+        </p>
+
+        <p>
+          The application itself is still very much a work in progress, but feel free to check out our <a
+            href="https://github.com/wikimedia/toolhunt-ui" target="_blank" class="underline-text">front-end
+            repository</a>.</p>
+
+        <p>Next time I’ll be going into more detail regarding the tech stack and some of the challenges we’ve faced
+          during the first half of the internship period.
+        </p>
+
+      </article>
+
+
+
+
+    </section>
+  </main>
+
+  <footer class="footer" style="margin-top: 0">
+    <ul class="social-list">
+
+      <li class="social-list__item"><a href="https://www.linkedin.com/in/nicole-barnabee-burns/"
+          class="social-list__link" target="_blank">
+          <i class="fa-brands fa-linkedin social-list__icon"></i></a></li>
+
+      <li class="social-list__item"><a href="https://twitter.com/NicoleBarnabee" class="social-list__link"
+          target="_blank">
+          <i class="fa-brands fa-twitter social-list__icon"></i></a>
+      </li>
+
+      <li class="social-list__item"><a href="https://github.com/nbarnabee" class="social-list__link" target="_blank">
+          <i class="fa-brands fa-github social-list__icon"></i></a></li>
+
+      <li class="social-list__item"><a href="mailto:nicole.barnabee@gmail.com" class="social-list__link"
+          target="_blank">
+          <i class="fa-solid fa-envelope social-list__icon"></i></a>
+      </li>
+    </ul>
+    <small>&copy;2022, Nicole Barnabee.&nbsp; Photo by <a
+        href="https://unsplash.com/@szolkin?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+        target="_blank" class="underline-text">Sergey Zolkin</a> on <a
+        href="https://unsplash.com/@szolkin?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+        target="_blank" class="underline-text">Unsplash</a>.
+    </small>
+  </footer>
+
+
+  <script src="../assets/main.js">
+  </script>
+</body>
+
+</html>
