@@ -181,46 +181,24 @@ h5,
   font-weight: 300;
 }
 
-.section__subtitle {
-  margin-bottom: 1em;
-  font-size: var(--fs-h3);
-  color: var(--color-darker);
-}
-
-.section__subtitle--intro,
-.section__subtitle--about,
-.section__subtitle--project {
-  background: var(--color-accent_light);
-  padding: 0.25em;
-  margin-top: -0.5rem;
-  font-weight: 400;
-  height: 2rem;
-  color: var(--color-light);
-}
-
-@media (min-width: 800px) {
-  .section__subtitle--intro {
-    margin-top: -1rem;
-  }
-}
-
 /* ------  Repeating features/elements -------- */
-
-/* .section__title--services::after,
-.section__title--work::after,
-.section__title--contact::after {
-  content: "";
-  display: block;
-  width: 4em;
-  height: 6px;
-  opacity: 80%;
-  margin: 0.1em auto 0.5em auto;
-  background-color: var(--color-accent);
-} */
 
 .text-block {
   max-width: 65ch;
   margin-inline: auto;
+}
+
+.color-bar-thick,
+.color-bar-thin {
+  background: var(--color-accent_light);
+  padding: 0.25em;
+  margin-top: -0.5rem;
+  height: 2rem;
+  width: 100%;
+}
+
+.color-bar-thin {
+  height: 0.5rem;
 }
 
 .dividing-line {
@@ -484,11 +462,6 @@ At this point the three lines are stacked on each other
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-}
-
-.section__subtitle--intro {
-  text-align: right;
-  width: 100%;
 }
 
 /* ------  footer -------- */
